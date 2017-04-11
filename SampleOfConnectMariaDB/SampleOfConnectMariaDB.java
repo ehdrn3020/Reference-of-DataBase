@@ -1,5 +1,5 @@
 /*
-Though this example, you can see that how to control execution sequence of Thread.  
+Before you testing, must add mariaDB connecter to Java BuildPath 
 */
 package test;
 import java.sql.Connection;
@@ -26,13 +26,13 @@ class DBMaria {
             Class.forName(driver);
             con = DriverManager.getConnection(url, Id, Pwd);
             if( con != null ){ 
-            	System.out.println("µ¥ÀÌÅÍ º£ÀÌ½º Á¢¼Ó ¼º°ø"); 
+            	System.out.println("ë°ì´í„° ë² ì´ìŠ¤ ì ‘ì† ì„±ê³µ"); 
             	}
         } catch (ClassNotFoundException e) { 
-        	System.out.println("µå¶óÀÌ¹ö ·Îµå ½ÇÆĞ");    
+        	System.out.println("ë“œë¼ì´ë²„ ë¡œë“œ ì‹¤íŒ¨");    
         } 
           catch (SQLException e) { 
-        	  System.out.println("µ¥ÀÌÅÍ º£ÀÌ½º Á¢¼Ó ½ÇÆĞ"); 
+        	  System.out.println("ë°ì´í„° ë² ì´ìŠ¤ ì ‘ì† ì‹¤íŒ¨"); 
         }
     }
     
@@ -49,7 +49,7 @@ class DBMaria {
 				System.out.println("content   : " + rs.getString("Value"));
 			}
 		} catch (SQLException e) {
-			System.out.println("Äõ¸® ¼öÇà ½ÇÆĞ");
+			System.out.println("ì¿¼ë¦¬ ìˆ˜í–‰ ì‹¤íŒ¨");
 		}
 	}
 }  
